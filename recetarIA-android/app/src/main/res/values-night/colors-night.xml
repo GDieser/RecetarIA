@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#1E1E1E</color>
+    <color name="black">#8A8A8A</color>
+    <color name="primario">#FFB74D</color>
+    <color name="gris_plomo">#B0B0B0</color>
+    <color name="fondo_claro">#1D1B1B</color>
+    <color name="fondo_caja">#2A2A2A</color>
+    <color name="eliminar">#A03838</color>
+    <color name="textwhite">#FFFFFFFF</color>
+</resources>

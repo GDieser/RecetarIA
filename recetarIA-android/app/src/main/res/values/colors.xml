@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primario">#FB8C00</color>
+    <color name="gris_plomo">#2A2A2A</color>
+    <color name="fondo_claro">#FBF4E8</color>
+    <color name="gris_claro">#6A6A6A</color>
+    <color name="fondo_caja">#F0F0F0</color>
+    <color name="violeta">#4E378A</color>
+    <color name="eliminar">#B43232</color>
+    <color name="textwhite">#E4E2E2</color>
+</resources>

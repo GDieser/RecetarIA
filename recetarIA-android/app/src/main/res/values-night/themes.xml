@@ -1,0 +1,19 @@
+<resources >
+    <!-- Base application theme. -->
+    <style name="Base.Theme.RecetarIA" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+    </style>
+
+    <style name="Theme.App.Splash" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    <style name="CalendarioPersonalizado" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorAccent">@color/primario</item>
+        <item name="colorPrimary">@color/primario</item>
+    </style>
+</resources>

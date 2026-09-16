@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/fondo_claro">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="32dp">
+
+        <LinearLayout
+            android:id="@+id/headerCocinar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Qué te gustaria preparar?"
+                android:textColor="@color/primario"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupMomento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/headerCocinar"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/lblComensales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="¿Para cuántos cocinamos?"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroupMomento" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilAdultosIA"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Adultos"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/tilNiniosIA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblComensales">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAdultosIA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNiniosIA"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Niños"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tilAdultosIA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tilAdultosIA"
+            app:layout_constraintTop_toTopOf="@+id/tilAdultosIA">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNiniosIA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/lblTiempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="¿Cuánto tiempo tenés?"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilAdultosIA" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupTiempo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/lblTiempo"
+            app:singleSelection="true">
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTiempoRapido"
+                style="@style/Widget.Recetaria.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poco (&lt; 30 min)" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTiempoMedio"
+                style="@style/Widget.Recetaria.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mas o menos (30-60 min)" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTiempoLento"
+                style="@style/Widget.Recetaria.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bastante (+60 min)" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTiempoIndistinto"
+                style="@style/Widget.Recetaria.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Indistinto" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/lblDificultad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Nivel de dificultad"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroupTiempo" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupDificultad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/lblDificultad"
+            app:singleSelection="true">
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDifFacil"
+                style="@style/Widget.Recetaria.Chip"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Principiante" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDifMedia"
+                style="@style/Widget.Recetaria.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intermedio" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDifDificil"
+                style="@style/Widget.Recetaria.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chef" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipIndistinto"
+                style="@style/Widget.Recetaria.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indistinto" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchAlacena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            style="@style/Widget.Recetaria.Switch"
+            android:text="Solo con lo que hay en mi alacena"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroupDificultad" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchPreferencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            style="@style/Widget.Recetaria.Switch"
+            android:text="Respetar mis preferencias"
+            app:layout_constraintTop_toBottomOf="@+id/switchAlacena" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchRestricciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            style="@style/Widget.Recetaria.Switch"
+            android:text="Cuidar mis restricciones médicas"
+            app:layout_constraintTop_toBottomOf="@+id/switchPreferencias" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilContextoIA"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="¿Algún deseo extra? (Ej: Usar bondiola)"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/switchRestricciones">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etContextoIA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="3" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGenerarReceta"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/gradiente"
+            android:text="¡A cocinar!"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilContextoIA" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@color/fondo_claro">
+
+    <TextView
+        android:id="@+id/textViewNombreReceta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre_de_la_receta"
+        android:textAlignment="center"
+        android:textColor="@color/primario"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCocinar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/primario"
+        android:text="@string/Cocinar"
+        android:textColor="@color/textwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNombreReceta" />
+
+    
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnVerDetalle"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/violeta"
+        app:icon="@drawable/ic_detalle"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@color/textwhite"
+        android:contentDescription="@string/ver_detalle"
+        android:tooltipText="@string/ver_detalle"
+        app:layout_constraintEnd_toStartOf="@+id/btnCambiarFecha"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCocinar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCambiarFecha"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#4C8E2D"
+        app:icon="@drawable/ic_calendario"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@color/textwhite"
+        android:contentDescription="@string/cambiarFecha"
+        android:tooltipText="@string/cambiarFecha"
+        app:layout_constraintEnd_toStartOf="@+id/btnEliminar"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btnVerDetalle"
+        app:layout_constraintTop_toBottomOf="@+id/btnCocinar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEliminar"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/eliminar"
+        app:icon="@drawable/ic_eliminar"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@color/textwhite"
+        android:contentDescription="@string/eliminar"
+        android:tooltipText="@string/eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btnCambiarFecha"
+        app:layout_constraintTop_toBottomOf="@+id/btnCocinar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
