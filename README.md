@@ -15,7 +15,7 @@ Este repositorio contiene el proyecto final desarrollado por el equipo 7, con el
 
 ## 🍳 Generación de recetas con IA
 
-* Creación dinámica de recetas a través de la API de OpenAI basándose en los ingredientes disponibles en el hogar.
+* Creación dinámica de recetas a través de la API de Gemini basándose en los ingredientes disponibles en el hogar.
 
 
 * Adaptación inteligente de las preparaciones para ajustarse al tiempo disponible, los conocimientos culinarios y los objetivos de salud del usuario.
@@ -42,7 +42,7 @@ Este repositorio contiene el proyecto final desarrollado por el equipo 7, con el
 * Construcción dinámica de prompts en el backend y validación estricta de las respuestas devueltas por la IA.
 
 
-* Protección de credenciales sensibles, aislando la clave de acceso a la API de OpenAI fuera de la aplicación cliente para maximizar la seguridad, controlar el consumo y facilitar la escalabilidad del sistema.
+* Protección de credenciales sensibles, aislando la clave de acceso a la API de Gemini fuera de la aplicación cliente para maximizar la seguridad, controlar el consumo y facilitar la escalabilidad del sistema.
 
 
 
