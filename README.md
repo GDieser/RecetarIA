@@ -60,7 +60,7 @@ Este repositorio contiene el proyecto final desarrollado por el equipo 7, con el
 * Arquitectura MVVM
 
 
-* API de OpenAI
+* API de Gemini
 
 
 * JSON / HTTP
