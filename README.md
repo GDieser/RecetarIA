@@ -1,4 +1,4 @@
-#📱 RECETARiA - Tu Asistente en la Cocina - Equipo 7
+# 📱 RECETARiA - Tu Asistente en la Cocina - Equipo 7
 
 Este repositorio contiene el proyecto final desarrollado por el equipo 7, con el cual se alcanzó el título de Técnico Universitario en Programación en la UTN. RECETARiA es una aplicación móvil Android que funciona como un asistente culinario inteligente. La solución utiliza inteligencia artificial para generar recetas personalizadas, permitiendo a los usuarios organizar su alimentación diaria, reducir el desperdicio de comida y disponer de sus preparaciones sin necesidad de conexión a internet.
 
@@ -13,7 +13,7 @@ Este repositorio contiene el proyecto final desarrollado por el equipo 7, con el
 
 
 
-##🍳 Generación de recetas con IA
+## 🍳 Generación de recetas con IA
 
 * Creación dinámica de recetas a través de la API de OpenAI basándose en los ingredientes disponibles en el hogar.
 
@@ -22,7 +22,7 @@ Este repositorio contiene el proyecto final desarrollado por el equipo 7, con el
 
 
 
-##💾 Gestión de recetas y Modo Offline
+## 💾 Gestión de recetas y Modo Offline
 
 * Interfaz simple, clara e intuitiva diseñada para el uso cotidiano en dispositivos móviles.
 
@@ -34,7 +34,7 @@ Este repositorio contiene el proyecto final desarrollado por el equipo 7, con el
 
 
 
-##🛡️ Arquitectura y Seguridad
+## 🛡️ Arquitectura y Seguridad
 
 * Implementación de arquitectura cliente-servidor con un servidor intermedio (proxy) para evitar la comunicación directa de la app con servicios externos.
 
