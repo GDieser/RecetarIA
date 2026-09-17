@@ -4,7 +4,7 @@ Este repositorio contiene el proyecto final desarrollado por el equipo 7, con el
 
 ### Funcionalidades principales
 
-##👤 Perfil de usuario y Onboarding
+## 👤 Perfil de usuario y Onboarding
 
 * Encuesta inicial de onboarding para relevar el contexto del usuario.
 
